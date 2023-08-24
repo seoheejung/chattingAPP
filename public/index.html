@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io CHAT APP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h3>my pokemon</h3>
+        <div id="topBar">
+            <div id="userInfo">
+                <img id="userIcon" src="" >
+                <p id="userName"></p>
+            </div>
+            <select id="room">
+                <option value="">채팅룸 선택</option>
+                <option value="101">101</option>
+                <option value="102">102</option>
+                <option value="103">103</option>
+                <option value="104">104</option>
+                <option value="105">105</option>
+                <option value="106">106</option>
+                <option value="107">107</option>
+                <option value="108">108</option>
+                <option value ="109">109</option>
+                <option value ="110">110</option>
+            <select>
+        </div>
+        <div id="chatUI" style="display: none;">
+            <ul id="messages"></ul>
+            <form>
+                <input id="message" autocomplete="off" autofocus />
+                <button>전송</button>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

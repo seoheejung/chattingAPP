@@ -1,0 +1,150 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
+    background-color: #edf6ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 5px;
+    padding: 0;
+}
+
+#app {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+#topBar {
+    display: flex;
+    justify-content: space-between;  /* 아이템들 사이의 공간 최대화 */
+    align-items: center;
+    height: 80px;
+}
+
+#userInfo {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 10px;
+}
+
+#userName {
+    font-size: 20px;
+}
+
+#room {
+    display: block;
+    width: 30%;
+    height: 40px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#messages {
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    list-style: none;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+#message {
+    flex-grow: 1;
+    padding: 6px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* 가로 스크롤바 숨기기 */
+#messages::-webkit-scrollbar {
+    width: 0;
+}
+
+/* 세로 스크롤바 디자인 */
+#messages::-webkit-scrollbar-thumb {
+    background-color: #888; /* 스크롤바 색상 */
+    border-radius: 50px; /* 타원형 모양으로 만들기 */
+}
+
+form {
+    display: flex;
+}
+
+button {
+    margin-left: 10px;
+    padding: 6px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #495057;
+    color: white;
+}
+
+/*  채팅 내용 */
+.message-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.message-name {
+    align-items: center;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.message-text {
+    display: inline-block;
+    word-wrap: break-word;
+    max-width: 70%;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+.message-received {
+    color: #406a5e;
+}
+
+.message-received .message-text {
+    background-color: #91c4bb;
+}
+
+.message-sent {
+    color: #482249;
+    text-align: right;
+}
+
+.message-sent .message-text {
+    background-color: #9992c6;
+}
+
+.user-image {
+    width: 30px;     /* 이미지 너비 */
+    height: 30px;    /* 이미지 높이 */
+    border-radius: 40%; /* 원형으로 만들기 */
+    margin-right: 10px; /* 이름과의 간격 조정 */
+}
+
+.new-message {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-size: 12px;
+}
